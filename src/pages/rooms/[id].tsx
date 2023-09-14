@@ -4,7 +4,7 @@ import { GOOGLE_DRIVE_SETTINGS } from '@/config/google';
 import { parseCSV } from '@/utils/csv-parser';
 
 interface Props {
-  room: CSVData;
+  room: IRoom;
 }
 
 const Room: React.FC<Props> = ({ room }) => {
@@ -28,7 +28,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   // TODO: 仮データ
   const data = `"id","name","address"\n"1","Room 1","Address 1"\n"2","Room 2","Address 2"`;
   // CSVデータを解析してpropsとして返す
-  const parsedData = parseCSV(data);
+  const parsedData: IRoom[] = parseCSV(data);
   const paths = parsedData.map((dataItem) => ({
     params: { id: dataItem.id.toString() },
   }));
@@ -52,7 +52,7 @@ export const getStaticProps: GetStaticProps = async (
   // TODO: 仮データ
   const data = `"id","name","address"\n"1","Room 1","Address 1"\n"2","Room 2","Address 2"`;
 
-  const parsedData = parseCSV(data);
+  const parsedData: IRoom[] = parseCSV(data);
   const room = parsedData.find(
     (item) => item.id.toString() === context.params?.id
   );

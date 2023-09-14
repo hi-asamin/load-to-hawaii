@@ -1,4 +1,4 @@
-export function parseCSV(csvData: string): CSVData[] {
+export function parseCSV(csvData: string): ICSVData[] {
   const trimQuotes = (str: string) => {
     if (str.startsWith('"') && str.endsWith('"')) {
       return str.slice(1, -1);

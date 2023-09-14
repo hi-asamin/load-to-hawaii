@@ -7,7 +7,7 @@ import { parseCSV } from '@/utils/csv-parser';
 // INFO: https://blog.makotoishida.com/2020/06/reactgoogle-drive-apigoogle-drive.html
 
 interface Props {
-  rooms: CSVData[];
+  rooms: IRoom[];
 }
 
 const Rooms: React.FC<Props> = ({ rooms }) => {
@@ -29,7 +29,7 @@ const Rooms: React.FC<Props> = ({ rooms }) => {
 export default Rooms;
 
 export const getStaticProps: GetStaticProps = async () => {
-  let parsedData: CSVData[] = [];
+  let parsedData: IRoom[] = [];
   try {
     // const url = `${GOOGLE_DRIVE_SETTINGS.url}/${GOOGLE_DRIVE_SETTINGS.fileId}?alt=media`;
     // const { data } = await axios.get(url, {

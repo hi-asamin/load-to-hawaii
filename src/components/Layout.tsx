@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import { ReactNode } from 'react';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import { SITE_NAME, SITE_DESCRIPTION } from '@/config/base';
 
 interface Props {
@@ -34,17 +36,13 @@ const Layout: React.FC<Props> = ({
       </Head>
       <div className="min-h-screen flex flex-col">
         {/* ヘッダー */}
-        <header className="bg-blue-600 text-white p-4">
-          <h1 className="text-xl">{SITE_NAME}</h1>
-        </header>
+        <Header />
 
         {/* コンテンツ */}
         <main className="flex-grow p-4">{children}</main>
 
         {/* フッター */}
-        <footer className="bg-gray-800 text-white p-4">
-          <p>&copy; 2023 {SITE_NAME}</p>
-        </footer>
+        <Footer />
       </div>
     </>
   );
