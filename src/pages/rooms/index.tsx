@@ -16,9 +16,7 @@ const Rooms: React.FC<Props> = ({ rooms }) => {
       {rooms.map((room, index) => (
         <div key={index}>
           <Link href={`/rooms/${room.id}`} passHref>
-            <h2>
-              {room.name} - {room.address}
-            </h2>
+            <h2>{room.name}</h2>
           </Link>
         </div>
       ))}
