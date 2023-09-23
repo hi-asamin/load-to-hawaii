@@ -1,8 +1,8 @@
 interface IRoom {
   id: string;
+  name: string;
   rank: string;
   thumbnail: string;
-  name: string;
   area: string;
   discountInfo?: string;
   price: string;
