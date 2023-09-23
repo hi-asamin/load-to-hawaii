@@ -8,11 +8,7 @@ interface Props {
 }
 
 const Room: React.FC<Props> = ({ room }) => {
-  return (
-    <div>
-      {room.name} - {room.address}
-    </div>
-  );
+  return <div>{room.name}</div>;
 };
 
 export default Room;
@@ -40,9 +36,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 // getStaticPropsの実装
-export const getStaticProps: GetStaticProps = async (
-  context: GetStaticPropsContext
-) => {
+export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {
   // const url = `${GOOGLE_DRIVE_SETTINGS.url}/${GOOGLE_DRIVE_SETTINGS.fileId}?alt=media`;
   // const { data } = await axios.get(url, {
   //   headers: {
@@ -53,9 +47,7 @@ export const getStaticProps: GetStaticProps = async (
   const data = `"id","name","address"\n"1","Room 1","Address 1"\n"2","Room 2","Address 2"`;
 
   const parsedData: IRoom[] = parseCSV(data);
-  const room = parsedData.find(
-    (item) => item.id.toString() === context.params?.id
-  );
+  const room = parsedData.find((item) => item.id.toString() === context.params?.id);
 
   return {
     props: {
