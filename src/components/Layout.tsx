@@ -34,12 +34,12 @@ const Layout: React.FC<Props> = ({
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content="/path-to-your-image.jpg" />
       </Head>
-      <div className="min-h-screen flex flex-col">
+      <div className="">
         {/* ヘッダー */}
         <Header />
 
         {/* コンテンツ */}
-        <main className="flex-grow p-4">{children}</main>
+        <div className="">{children}</div>
 
         {/* フッター */}
         <Footer />

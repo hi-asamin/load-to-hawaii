@@ -1,23 +1,35 @@
+import { GetStaticProps } from 'next';
 import Image from 'next/image';
-import Layout from '@/components/Layout';
+import { fetchRooms } from '@/adapter/fetchRooms';
+import { SearchBar } from '@/components/SearchBar';
 import CardList from '@/components/CardList';
 
-export default function Home() {
+interface TopPageProps {
+  rooms: IRoom[];
+}
+
+const Top: React.FC<TopPageProps> = ({ rooms }) => {
   return (
-    <Layout>
-      {/* ヒーローイメージ */}
-      <section className="hero">
-        <Image
-          src="/images/hero-image.jpg"
-          alt="Hero Image"
-          width={1200}
-          height={800}
-          layout="responsive"
-        />
-      </section>
+    <>
+      {/* メインビジュアル */}
+      <div className="relative bg-gray-200 md:h-[66vh] h-[50vh] flex items-center justify-center">
+        <span className="text-xl font-bold">メインビジュアル</span>
+      </div>
+      <SearchBar />
 
       {/* Swiperによる横並びカードのリスト */}
-      <CardList />
-    </Layout>
+      <CardList rooms={rooms} />
+    </>
   );
-}
+};
+
+export const getStaticProps: GetStaticProps<TopPageProps> = async () => {
+  const rooms = await fetchRooms();
+  return {
+    props: {
+      rooms,
+    },
+  };
+};
+
+export default Top;

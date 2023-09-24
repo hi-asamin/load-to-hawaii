@@ -1,7 +1,10 @@
 import CardItem from '@/components/CardItem';
-import { rooms } from '@/data/rooms';
 
-const CardList: React.FC = () => {
+interface CardListProps {
+  rooms: IRoom[];
+}
+
+const CardList: React.FC<CardListProps> = ({ rooms }) => {
   return (
     <div className="_list_1f9mj_2">
       {rooms.map((room) => (

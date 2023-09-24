@@ -1,12 +1,12 @@
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
-import { rooms } from '@/data/rooms';
+import { fetchRooms } from '@/adapter/fetchRooms';
 
-interface Props {
+interface RoomsPageProps {
   rooms: IRoom[];
 }
 
-const Rooms: React.FC<Props> = ({ rooms }) => {
+const Rooms: React.FC<RoomsPageProps> = ({ rooms }) => {
   return (
     <div>
       {rooms.map((room, index) => (
@@ -22,7 +22,8 @@ const Rooms: React.FC<Props> = ({ rooms }) => {
 
 export default Rooms;
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps<RoomsPageProps> = async () => {
+  const rooms = await fetchRooms();
   return {
     props: {
       rooms,
