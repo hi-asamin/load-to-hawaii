@@ -18,10 +18,15 @@ const Header: React.FC = () => {
           <Link href="/about" className="text-gray-700 hover:text-blue-500">
             About
           </Link>
-          <Link href="/blog" className="text-gray-700 hover:text-blue-500">
+          <Link
+            href="/blog"
+            className="text-gray-700 hover:text-blue-500"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Blog
           </Link>
-          <Link href="/room" className="text-gray-700 hover:text-blue-500">
+          <Link href="/rooms" className="text-gray-700 hover:text-blue-500">
             Room
           </Link>
           <Link
@@ -43,10 +48,15 @@ const Header: React.FC = () => {
           <Link href="/about" className="block mb-2 text-gray-700 hover:text-blue-500">
             About
           </Link>
-          <Link href="/blog" className="block mb-2 text-gray-700 hover:text-blue-500">
+          <Link
+            href="/blog"
+            className="block mb-2 text-gray-700 hover:text-blue-500"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Blog
           </Link>
-          <Link href="/room" className="block mb-2 text-gray-700 hover:text-blue-500">
+          <Link href="/rooms" className="block mb-2 text-gray-700 hover:text-blue-500">
             Room
           </Link>
           <Link

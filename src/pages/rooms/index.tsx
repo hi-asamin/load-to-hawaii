@@ -1,6 +1,6 @@
 import { GetStaticProps } from 'next';
-import Link from 'next/link';
 import { fetchRooms } from '@/adapter/fetchRooms';
+import CardList from '@/components/CardList';
 
 interface RoomsPageProps {
   rooms: IRoom[];
@@ -8,15 +8,12 @@ interface RoomsPageProps {
 
 const Rooms: React.FC<RoomsPageProps> = ({ rooms }) => {
   return (
-    <div>
-      {rooms.map((room, index) => (
-        <div key={index}>
-          <Link href={`/rooms/${room.id}`} passHref>
-            <h2>{room.name}</h2>
-          </Link>
-        </div>
-      ))}
-    </div>
+    <>
+      <main className={`flex min-h-screen flex-col items-center justify-between p-24`}>
+        <h1 className="text-4xl">物件検索</h1>
+        <CardList rooms={rooms} />
+      </main>
+    </>
   );
 };
 
