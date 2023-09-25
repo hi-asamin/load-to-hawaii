@@ -9,7 +9,9 @@ const Header: React.FC = () => {
     <header className="bg-white p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <div className="text-blue-500 font-bold text-xl">Logo</div>
+        <Link href="/">
+          <div className="text-blue-500 font-bold text-xl">Logo</div>
+        </Link>
 
         {/* PC Navigation */}
         <nav className="hidden md:flex space-x-4">
