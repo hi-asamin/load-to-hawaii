@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { SITE_NAME } from '@/config/base';
+import { SITE_NAME } from '@/config/constants';
 
 /**
  * Footer component that displays site information and links.

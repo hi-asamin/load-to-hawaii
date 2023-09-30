@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useState } from 'react';
-import { SITE_NAME } from '@/config/base';
+import { SITE_NAME, BLOG_URL } from '@/config/constants';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +19,7 @@ const Header: React.FC = () => {
             About
           </Link>
           <Link
-            href="/blog"
+            href={BLOG_URL}
             className="text-gray-700 hover:text-blue-500"
             target="_blank"
             rel="noopener noreferrer"
@@ -49,7 +49,7 @@ const Header: React.FC = () => {
             About
           </Link>
           <Link
-            href="/blog"
+            href={BLOG_URL}
             className="block mb-2 text-gray-700 hover:text-blue-500"
             target="_blank"
             rel="noopener noreferrer"

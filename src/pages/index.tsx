@@ -18,7 +18,9 @@ const Top: React.FC<TopPageProps> = ({ rooms }) => {
       <SearchBar />
 
       {/* Swiperによる横並びカードのリスト */}
-      <CardList rooms={rooms} />
+      <main>
+        <CardList rooms={rooms} />
+      </main>
     </>
   );
 };

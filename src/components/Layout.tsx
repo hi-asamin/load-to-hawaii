@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { ReactNode } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { SITE_NAME, SITE_DESCRIPTION } from '@/config/base';
+import { SITE_NAME, SITE_DESCRIPTION } from '@/config/constants';
 
 interface Props {
   children: ReactNode;
@@ -39,7 +39,7 @@ const Layout: React.FC<Props> = ({
         <Header />
 
         {/* コンテンツ */}
-        <div className="">{children}</div>
+        {children}
 
         {/* フッター */}
         <Footer />
