@@ -1,7 +1,7 @@
 interface IRoom {
   id: string;
   name: string;
-  images: string[];
+  images: Image[];
   description: string;
   rank: string;
   thumbnail: string;
