@@ -9,11 +9,11 @@ interface Props {
 const Room: React.FC<Props> = ({ room }) => {
   return (
     <>
-      <RoomMainVisual images={room.images} />
-      <div className="container mx-auto px-4">
-        <h1 className="text-2xl font-bold">{room.name}</h1>
-        <p className="text-gray-500">{room.description}</p>
-      </div>
+      <main className="">
+        <RoomMainVisual images={room.images} />
+        <h1 className="">{room.name}</h1>
+        <p className="">{room.description}</p>
+      </main>
     </>
   );
 };

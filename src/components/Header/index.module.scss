@@ -1,0 +1,103 @@
+#pcHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* メニューの両サイドに余白を設ける */
+  padding: 2rem 2rem;
+}
+
+#pcNav {
+  /* メニューを横に並べる */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* メニューを右端に寄せる */
+  margin-right: 1rem;
+}
+
+.menu {
+  list-style: none;
+}
+
+.snsMenu {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* 訪問後の色を変化させない */
+  color: inherit;
+  text-decoration: none;
+  /* ホバー時に文字を大きくする */
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.mobileHeaderOpen {
+  visibility: visible;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.mobileHeaderTop {
+  /* 横並びにする */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#mobileNav {
+  /* 画面中央に表示する */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* メニューを縦に並べる */
+  flex-direction: column;
+  padding: 160px 0;
+}
+
+/* PCディスプレイのスタイリング */
+@media (min-width: 768px) {
+  .logo {
+    justify-content: flex-start;
+  }
+  .menu {
+    display: flex;
+  }
+  #mobileHeader {
+    display: none;
+  }
+}
+
+/* Mobileディスプレイのスタイリング */
+@media (max-width: 767px) {
+  .logo {
+    /* 画面中央に表示する */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  #pcHeader {
+    display: none;
+  }
+  #hamburger {
+    display: block;
+  }
+  .snsMenu {
+    padding: 5rem 0;
+  }
+}

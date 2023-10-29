@@ -33,17 +33,18 @@ const Layout: React.FC<Props> = ({
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content="/path-to-your-image.jpg" />
+        {/* reset.css ress */}
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
       </Head>
-      <div className="">
-        {/* ヘッダー */}
-        <Header />
 
-        {/* コンテンツ */}
-        {children}
+      {/* ヘッダー */}
+      <Header />
 
-        {/* フッター */}
-        <Footer />
-      </div>
+      {/* コンテンツ */}
+      {children}
+
+      {/* フッター */}
+      <Footer />
     </>
   );
 };

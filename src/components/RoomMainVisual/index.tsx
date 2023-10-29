@@ -44,8 +44,6 @@ export const RoomMainVisual: React.FC<RoomMainVisualProps> = ({ images }) => {
         }}
         navigation={true}
         modules={[Pagination]}
-        slidesPerView={1} // 1画面に1枚のスライドを表示
-        spaceBetween={0} // スライド間のスペースを0に設定
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>

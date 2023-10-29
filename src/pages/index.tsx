@@ -12,8 +12,8 @@ const Top: React.FC<TopPageProps> = ({ rooms }) => {
   return (
     <>
       {/* メインビジュアル */}
-      <div className="relative bg-gray-200 md:h-[66vh] h-[50vh] flex items-center justify-center">
-        <span className="text-xl font-bold">メインビジュアル</span>
+      <div className="">
+        <span className="">メインビジュアル</span>
       </div>
       <SearchBar />
 

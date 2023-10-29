@@ -7,7 +7,7 @@ interface CardListProps {
 
 const CardList: React.FC<CardListProps> = ({ rooms }) => {
   return (
-    <div className="_list_1f9mj_2">
+    <div className="">
       {rooms.map((room) => (
         <Link href={`/rooms/${room.id}`} key={room.id}>
           <CardItem key={room.id} room={room} />

@@ -19,18 +19,18 @@ export const SearchBar: React.FC = () => {
   };
 
   return (
-    <div className="sticky top-0 bg-white z-10 p-4">
-      <div className="flex items-center">
+    <div className="">
+      <div className="">
         <textarea
-          className="flex-grow p-2 border rounded-md"
+          className=""
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
           placeholder="検索..."
         ></textarea>
-        <button className="ml-2 p-2 border rounded-md" aria-label="フィルターを表示">
+        <button className="">
           <span>条件絞り込み</span>
         </button>
-        <button className="ml-2 p-2 bg-blue-500 text-white rounded-md" onClick={handleSearch}>
+        <button className="" onClick={handleSearch}>
           検索
         </button>
       </div>
