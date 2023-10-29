@@ -1,5 +1,6 @@
 import { GetStaticProps } from 'next';
 import { fetchRooms } from '@/adapter/fetchRooms';
+import BaseLayout from '@/layout/BaseLayout';
 import { SearchBar } from '@/components/SearchBar';
 import CardList from '@/components/CardList';
 import MainVisual from '@/components/MainVisual';
@@ -9,7 +10,7 @@ interface TopPageProps {
 
 const Top: React.FC<TopPageProps> = ({ rooms }) => {
   return (
-    <>
+    <BaseLayout>
       {/* メインビジュアル */}
       <MainVisual src="/images/main-visual.jpeg" alt="" />
       <SearchBar />
@@ -18,7 +19,7 @@ const Top: React.FC<TopPageProps> = ({ rooms }) => {
       <main>
         <CardList rooms={rooms} />
       </main>
-    </>
+    </BaseLayout>
   );
 };
 

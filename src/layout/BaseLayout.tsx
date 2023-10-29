@@ -4,13 +4,13 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { SITE_NAME, SITE_DESCRIPTION } from '@/config/constants';
 
-interface Props {
+interface BaseLayoutProps {
   children: ReactNode;
   title?: string;
   description?: string;
 }
 
-const Layout: React.FC<Props> = ({
+const BaseLayout: React.FC<BaseLayoutProps> = ({
   children,
   title = SITE_NAME,
   description = SITE_DESCRIPTION,
@@ -49,4 +49,4 @@ const Layout: React.FC<Props> = ({
   );
 };
 
-export default Layout;
+export default BaseLayout;
