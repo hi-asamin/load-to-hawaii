@@ -157,19 +157,13 @@ const Header: React.FC = () => {
 
       {/* Mobile Header */}
       <div id={styles.mobileHeader}>
+        <MobileHeaderTop />
         {/* Mobile Navigation Menu */}
-        {isMenuOpen ? (
-          // If menu is open, show menu
-          <div className={styles.mobileHeaderOpen}>
-            <MobileHeaderTop />
-            <nav id={styles.mobileNav} role="navigation">
-              <NavigationMenu />
-              <SNSMenu />
-            </nav>
-          </div>
-        ) : (
-          // If menu is closed, show logo and hamburger menu
-          <MobileHeaderTop />
+        {isMenuOpen && (
+          <nav id={styles.mobileNav} role="navigation">
+            <NavigationMenu />
+            <SNSMenu />
+          </nav>
         )}
       </div>
     </header>

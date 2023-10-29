@@ -41,14 +41,6 @@
   }
 }
 
-.mobileHeaderOpen {
-  visibility: visible;
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgba(255, 255, 255, 1);
-}
-
 .mobileHeaderTop {
   /* 横並びにする */
   display: flex;
@@ -68,6 +60,7 @@
   /* メニューを縦に並べる */
   flex-direction: column;
   padding: 160px 0;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 /* PCディスプレイのスタイリング */
