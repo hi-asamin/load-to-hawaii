@@ -1,13 +1,18 @@
-interface ExchangeRate {
+type ExchangeRate = {
   high: string;
   open: string;
   bid: string;
   currencyPairCode: string;
   ask: string;
   low: string;
-}
+};
 
-export const fetchExchangeRate = async () => {
+/**
+ * 外部APIからUSD/JPYのレートを取得する
+ *
+ * @returns {Promise<number>} - USD/JPYのレート
+ */
+export const fetchExchangeRate = async (): Promise<number> => {
   try {
     // fetch関数を使って、外部APIからデータを取得する
     const response = await fetch('https://www.gaitameonline.com/rateaj/getrate');
