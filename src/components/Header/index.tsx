@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose, AiOutlineInstagram } from 'react-icons/ai';
-import { FaTiktok } from 'react-icons/fa';
-import { BLOG_URL, TIKTOK_URL, INSTAGRAM_URL } from '@/config/constants';
+import { FaTiktok, FaLine } from 'react-icons/fa';
+import { BLOG_URL, TIKTOK_ACCOUNT, INSTAGRAM_ACCOUNT, LINE_ACCOUNT } from '@/config/constants';
 
 import styles from '@/components/Header/index.module.scss';
 
@@ -106,7 +106,7 @@ const Header: React.FC = () => {
       <ul className={styles.snsMenu}>
         <Link
           className={styles.navItem}
-          href={TIKTOK_URL}
+          href={TIKTOK_ACCOUNT}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -114,11 +114,19 @@ const Header: React.FC = () => {
         </Link>
         <Link
           className={styles.navItem}
-          href={INSTAGRAM_URL}
+          href={INSTAGRAM_ACCOUNT}
           target="_blank"
           rel="noopener noreferrer"
         >
           <AiOutlineInstagram />
+        </Link>
+        <Link
+          className={styles.navItem}
+          href={LINE_ACCOUNT}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaLine />
         </Link>
       </ul>
     );
