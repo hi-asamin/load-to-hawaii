@@ -1,9 +1,8 @@
 import { GetStaticProps } from 'next';
-import Image from 'next/image';
 import { fetchRooms } from '@/adapter/fetchRooms';
 import { SearchBar } from '@/components/SearchBar';
 import CardList from '@/components/CardList';
-
+import MainVisual from '@/components/MainVisual';
 interface TopPageProps {
   rooms: IRoom[];
 }
@@ -12,9 +11,7 @@ const Top: React.FC<TopPageProps> = ({ rooms }) => {
   return (
     <>
       {/* メインビジュアル */}
-      <div className="">
-        <span className="">メインビジュアル</span>
-      </div>
+      <MainVisual src="/images/main-visual.jpeg" alt="" />
       <SearchBar />
 
       {/* Swiperによる横並びカードのリスト */}

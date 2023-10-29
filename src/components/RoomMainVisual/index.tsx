@@ -10,6 +10,8 @@ import styles from '@/components/RoomMainVisual/index.module.css';
 // import required modules
 import { Pagination } from 'swiper/modules';
 
+import MainVisual from '@/components/MainVisual';
+
 interface RoomMainVisualProps {
   images: Image[];
 }
@@ -47,13 +49,7 @@ export const RoomMainVisual: React.FC<RoomMainVisualProps> = ({ images }) => {
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <Image
-              src={image.src}
-              alt={image.alt}
-              width={1200} // PCでの表示サイズを調整
-              height={800} // PCでの表示サイズを調整
-              sizes="(min-width: 768px) 1200px, 100vw"
-            />
+            <MainVisual src={image.src} alt={image.alt} />
           </SwiperSlide>
         ))}
       </Swiper>
