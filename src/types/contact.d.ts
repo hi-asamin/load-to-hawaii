@@ -1,0 +1,3 @@
+interface ContactApiRequestBody {
+  email: string;
+}
