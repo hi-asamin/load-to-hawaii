@@ -5,4 +5,5 @@ export const {
   TIKTOK_ACCOUNT = 'https://www.tiktok.com/@luanastay',
   INSTAGRAM_ACCOUNT = 'https://www.instagram.com/luana_hawaii',
   LINE_ACCOUNT = '',
+  GOOGLE_MAPS_API_KEY = '',
 } = process.env;
