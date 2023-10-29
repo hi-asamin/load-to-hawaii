@@ -1,0 +1,39 @@
+#floatingNav {
+  /* 画面最下部に固定する */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* 他の要素よりも手前に表示する */
+  z-index: 99999;
+  /* 背景色を指定する */
+  background-color: #fff;
+  padding: 1rem 2rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 1rem;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  /* ボタンの角を丸くする */
+  border-radius: 0.5rem;
+  /* ボタンの文字色を白色に指定する */
+  color: #fff;
+  /* ボタンの背景色を青色に指定する */
+  background-color: #007bff;
+}
+
+/* PCディスプレイのスタイリング */
+@media (min-width: 768px) {
+  #floatingNav {
+    display: none;
+  }
+}
