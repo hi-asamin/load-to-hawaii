@@ -104,30 +104,36 @@ const Header: React.FC = () => {
   const SNSMenu = () => {
     return (
       <ul className={styles.snsMenu}>
-        <Link
-          className={styles.navItem}
-          href={TIKTOK_ACCOUNT}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaTiktok size={24} />
-        </Link>
-        <Link
-          className={styles.navItem}
-          href={INSTAGRAM_ACCOUNT}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <AiOutlineInstagram size={24} />
-        </Link>
-        <Link
-          className={styles.navItem}
-          href={LINE_ACCOUNT}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaLine size={24} />
-        </Link>
+        <li>
+          <Link
+            className={styles.navItem}
+            href={TIKTOK_ACCOUNT}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTiktok size={24} />
+          </Link>
+        </li>
+        <li>
+          <Link
+            className={styles.navItem}
+            href={INSTAGRAM_ACCOUNT}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <AiOutlineInstagram size={24} />
+          </Link>
+        </li>
+        <li>
+          <Link
+            className={styles.navItem}
+            href={LINE_ACCOUNT}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLine size={24} />
+          </Link>
+        </li>
       </ul>
     );
   };

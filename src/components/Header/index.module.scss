@@ -13,6 +13,10 @@
   align-items: center;
   /* メニューを右端に寄せる */
   margin-right: 1rem;
+  /* メニューの間隔を狭くする */
+  a {
+    padding: 0.6rem;
+  }
 }
 
 .menu {
@@ -81,6 +85,12 @@
   }
   .menu {
     display: flex;
+  }
+  .snsMenu {
+    /* SNSアイコンの間隔を狭くする */
+    a {
+      padding: 0.5rem;
+    }
   }
   #mobileHeader {
     display: none;
