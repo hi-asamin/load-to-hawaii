@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { FreeMode } from 'swiper/modules';
 
 import CardItem from '@/components/CardItem';
 
 import 'swiper/css';
+import 'swiper/css/free-mode';
 import styles from '@/components/RoomCardList/index.module.scss';
 
 interface RoomCardListProps {
@@ -17,6 +19,8 @@ const RoomCardList: React.FC<RoomCardListProps> = ({ rooms }) => {
       spaceBetween={16}
       slidesPerView={2.3} // 画面に表示されるスライドの数（初期表示時に次のカードの一部が見えるようにする）
       onSlideChange={() => console.log('slide change')}
+      freeMode={true} // スライドをスナップさせない
+      modules={[FreeMode]}
     >
       {rooms.map((room, index) => (
         <SwiperSlide key={index}>
