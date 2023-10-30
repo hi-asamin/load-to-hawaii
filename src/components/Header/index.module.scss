@@ -50,6 +50,8 @@
   border-radius: 0.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  /* 高さを指定する */
+  height: 4.5rem;
 }
 
 #mobileNav {
@@ -60,6 +62,15 @@
   /* メニューを縦に並べる */
   flex-direction: column;
   padding: 160px 0;
+  /* 画面全体に表示する */
+  position: fixed;
+  top: 4.5rem;
+  height: calc(100vh - 4.5rem);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  /* 背景色を設定する */
   background-color: rgba(255, 255, 255, 1);
 }
 
@@ -91,6 +102,6 @@
     display: block;
   }
   .snsMenu {
-    padding: 5rem 0;
+    padding: 7rem 0;
   }
 }

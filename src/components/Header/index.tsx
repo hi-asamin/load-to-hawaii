@@ -110,7 +110,7 @@ const Header: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaTiktok />
+          <FaTiktok size={24} />
         </Link>
         <Link
           className={styles.navItem}
@@ -118,7 +118,7 @@ const Header: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <AiOutlineInstagram />
+          <AiOutlineInstagram size={24} />
         </Link>
         <Link
           className={styles.navItem}
@@ -126,7 +126,7 @@ const Header: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaLine />
+          <FaLine size={24} />
         </Link>
       </ul>
     );
