@@ -1,0 +1,92 @@
+.container {
+  /* 画面の中央に表示する */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 auto;
+  form {
+    /* 中央寄せ */
+    text-align: center;
+  }
+}
+
+.inputGroup {
+  /* 入力項目間の余白 */
+  margin: 2rem 0;
+  /* 文字を左寄せに */
+  text-align: left;
+  input {
+    /* 背景色を薄いグレーに */
+    background-color: #eee;
+    /* 入力項目の両サイドに余白を設ける */
+    padding: 0.5rem;
+    /* 角を丸く */
+    border-radius: 0.3rem;
+    /* 枠線を薄く表示する */
+    border: 1px solid #ddd;
+    /* 入力項目の幅を広げる */
+    width: 20rem;
+  }
+}
+
+.inputLabel {
+  /* 文字を太字に */
+  font-weight: bold;
+}
+
+/* 必須項目のラベル */
+.required {
+  /* 背景色を赤に */
+  background-color: red;
+  /* 文字色を白に */
+  color: white;
+  /* 文字を太字に */
+  font-weight: bold;
+  /* 角を丸く */
+  border-radius: 0.3rem;
+  /* 赤い背景の中に文字が収まるように */
+  padding: 0.1rem 0.3rem;
+  /* 文字の大きさを小さく */
+  font-size: 0.8rem;
+  /* 入力項目のラベルと少し間隔を開ける */
+  margin-left: 0.5rem;
+}
+
+/* 任意項目のラベル */
+.optional {
+  /* 背景色をグレーに */
+  background-color: #ddd;
+  /* 文字色を黒に */
+  color: black;
+  /* 文字を太字に */
+  font-weight: bold;
+  /* 角を丸く */
+  border-radius: 0.3rem;
+  /* グレーの背景の中に文字が収まるように */
+  padding: 0.1rem 0.3rem;
+  /* 文字の大きさを小さく */
+  font-size: 0.8rem;
+  /* 入力項目のラベルと少し間隔を開ける */
+  margin-left: 0.5rem;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  /* メッセージの表示位置を左寄せにする */
+}
+
+.subumitButton {
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  /* 横幅いっぱいに広げる */
+  width: 100%;
+}

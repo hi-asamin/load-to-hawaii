@@ -14,6 +14,7 @@ interface RoomCardListProps {
 
 const RoomCardList: React.FC<RoomCardListProps> = ({ rooms }) => {
   return (
+    // TODO: 画面サイズによって表示数を変える
     <Swiper
       className={styles.swiperContainer}
       spaceBetween={16}
