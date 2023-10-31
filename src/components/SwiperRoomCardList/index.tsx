@@ -14,7 +14,6 @@ interface RoomCardListProps {
 
 const SwiperRoomCardList: React.FC<RoomCardListProps> = ({ rooms }) => {
   return (
-    // TODO: 画面サイズによって表示数を変える
     <Swiper
       className={styles.swiperContainer}
       spaceBetween={16}
@@ -22,6 +21,14 @@ const SwiperRoomCardList: React.FC<RoomCardListProps> = ({ rooms }) => {
       onSlideChange={() => console.log('slide change')}
       freeMode={true} // スライドをスナップさせない
       modules={[FreeMode]}
+      breakpoints={{
+        768: {
+          slidesPerView: 3.5, // 768px以上の画面サイズでのスライド数
+        },
+        1024: {
+          slidesPerView: 4.5, // 1024px以上の画面サイズでのスライド数
+        },
+      }}
     >
       {rooms.map((room, index) => (
         <SwiperSlide key={index}>
