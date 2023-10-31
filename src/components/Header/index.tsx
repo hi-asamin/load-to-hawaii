@@ -138,27 +138,12 @@ const Header: React.FC = () => {
     );
   };
 
-  const MobileHeaderTop = () => {
-    return (
-      <div className={styles.mobileHeaderTop}>
-        {/* Logo */}
-        <Link className={styles.logo} href="/">
-          <Image src="/logo.png" alt="logo" width={200} height={50} />
-        </Link>
-        {/* Hamburger Menu */}
-        <button id={styles.hamburger} onClick={handleClick}>
-          {isMenuOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
-        </button>
-      </div>
-    );
-  };
-
   return (
     <header>
       {/* PC Header */}
       <div id={styles.pcHeader}>
         {/* Logo */}
-        <Link className={styles.logo} href="/">
+        <Link id={styles.logo} href="/">
           <Image src="/logo.png" alt="logo" width={200} height={50} />
         </Link>
 
@@ -171,7 +156,16 @@ const Header: React.FC = () => {
 
       {/* Mobile Header */}
       <div id={styles.mobileHeader}>
-        <MobileHeaderTop />
+        <div className={styles.mobileHeaderTop}>
+          {/* Logo */}
+          <Link id={styles.logo} href="/">
+            <Image src="/logo.png" alt="logo" width={200} height={50} />
+          </Link>
+          {/* Hamburger Menu */}
+          <button id={styles.hamburger} onClick={handleClick}>
+            {isMenuOpen ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
+          </button>
+        </div>
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
           <nav id={styles.mobileNav} role="navigation">

@@ -45,19 +45,21 @@
   }
 }
 
+/* Mobileディスプレイのヘッダー */
 .mobileHeaderTop {
   /* 横並びにする */
   display: flex;
+  /* 左右の余白を均等にする */
   justify-content: space-between;
+  /* 縦方向の中央揃え */
   align-items: center;
+  /* 上下左右に余白を設ける */
   padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
   /* 高さを指定する */
   height: 4.5rem;
 }
 
+/* ハンバーガーメニュー展開時のナビゲーション */
 #mobileNav {
   /* 画面中央に表示する */
   display: flex;
@@ -80,8 +82,11 @@
 
 /* PCディスプレイのスタイリング */
 @media (min-width: 768px) {
-  .logo {
+  #logo {
     justify-content: flex-start;
+    img {
+      width: 100%;
+    }
   }
   .menu {
     display: flex;
@@ -99,17 +104,25 @@
 
 /* Mobileディスプレイのスタイリング */
 @media (max-width: 767px) {
-  .logo {
-    /* 画面中央に表示する */
+  // TODO: ロゴが中央に寄らない
+  #logo {
+    /* ロゴを中央に寄せる */
     display: flex;
     justify-content: center;
-    width: 100%;
+    /* カーソルを変更する */
+    cursor: pointer;
+    img {
+      width: 100%;
+    }
   }
   #pcHeader {
     display: none;
   }
   #hamburger {
-    display: block;
+    display: flex;
+    /* ハンバーガーメニューを右端に寄せる */
+    margin: 1rem;
+    justify-content: flex-end;
   }
   .snsMenu {
     padding: 7rem 0;
