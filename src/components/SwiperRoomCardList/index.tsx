@@ -6,13 +6,13 @@ import CardItem from '@/components/CardItem';
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
-import styles from '@/components/RoomCardList/index.module.scss';
+import styles from '@/components/SwiperRoomCardList/index.module.scss';
 
 interface RoomCardListProps {
   rooms: IRoom[];
 }
 
-const RoomCardList: React.FC<RoomCardListProps> = ({ rooms }) => {
+const SwiperRoomCardList: React.FC<RoomCardListProps> = ({ rooms }) => {
   return (
     // TODO: 画面サイズによって表示数を変える
     <Swiper
@@ -34,4 +34,4 @@ const RoomCardList: React.FC<RoomCardListProps> = ({ rooms }) => {
   );
 };
 
-export default RoomCardList;
+export default SwiperRoomCardList;

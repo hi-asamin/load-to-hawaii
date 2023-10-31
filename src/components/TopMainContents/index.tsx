@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { AiOutlineRight } from 'react-icons/ai';
-import RoomCardList from '@/components/RoomCardList';
+import SwiperRoomCardList from '@/components/SwiperRoomCardList';
 
 import styles from '@/components/TopMainContents/index.module.scss';
 
@@ -11,7 +11,6 @@ interface TopMainContentsProps {
 const TopMainContents: React.FC<TopMainContentsProps> = ({ rooms }) => {
   const router = useRouter();
   const handleClick = (section: string) => {
-    console.log(section + 'がクリックされました');
     router.push('/rooms');
   };
   return (
@@ -23,34 +22,34 @@ const TopMainContents: React.FC<TopMainContentsProps> = ({ rooms }) => {
             <AiOutlineRight size={18} />
           </span>
         </h2>
-        <RoomCardList rooms={rooms} />
+        <SwiperRoomCardList rooms={rooms} />
       </section>
-      <section id="popular" className={styles.sectionItem}>
-        <h2 className={styles.sectionTitle} onClick={() => handleClick('popular')}>
+      <section id="pair" className={styles.sectionItem}>
+        <h2 className={styles.sectionTitle} onClick={() => handleClick('pair')}>
           2人滞在におすすめの宿泊先
           <span>
             <AiOutlineRight size={18} />
           </span>
         </h2>
-        <RoomCardList rooms={rooms} />
+        <SwiperRoomCardList rooms={rooms} />
       </section>
-      <section id="popular" className={styles.sectionItem}>
-        <h2 className={styles.sectionTitle} onClick={() => handleClick('popular')}>
+      <section id="family" className={styles.sectionItem}>
+        <h2 className={styles.sectionTitle} onClick={() => handleClick('family')}>
           子連れにおすすめの宿泊先
           <span>
             <AiOutlineRight size={18} />
           </span>
         </h2>
-        <RoomCardList rooms={rooms} />
+        <SwiperRoomCardList rooms={rooms} />
       </section>
-      <section id="popular" className={styles.sectionItem}>
-        <h2 className={styles.sectionTitle} onClick={() => handleClick('popular')}>
+      <section id="friend" className={styles.sectionItem}>
+        <h2 className={styles.sectionTitle} onClick={() => handleClick('friend')}>
           大人数におすすめの宿泊先
           <span>
             <AiOutlineRight size={18} />
           </span>
         </h2>
-        <RoomCardList rooms={rooms} />
+        <SwiperRoomCardList rooms={rooms} />
       </section>
     </>
   );
