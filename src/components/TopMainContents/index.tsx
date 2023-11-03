@@ -19,7 +19,7 @@ const TopMainContents: React.FC<TopMainContentsProps> = ({ rooms }) => {
         <h2 className={styles.sectionTitle} onClick={() => handleClick('popular')}>
           人気の宿泊先
           <span>
-            <AiOutlineRight size={18} />
+            <AiOutlineRight size="1.2rem" />
           </span>
         </h2>
         <SwiperRoomCardList rooms={rooms} />
@@ -28,7 +28,7 @@ const TopMainContents: React.FC<TopMainContentsProps> = ({ rooms }) => {
         <h2 className={styles.sectionTitle} onClick={() => handleClick('pair')}>
           2人滞在におすすめの宿泊先
           <span>
-            <AiOutlineRight size={18} />
+            <AiOutlineRight size="1.2rem" />
           </span>
         </h2>
         <SwiperRoomCardList rooms={rooms} />
@@ -37,7 +37,7 @@ const TopMainContents: React.FC<TopMainContentsProps> = ({ rooms }) => {
         <h2 className={styles.sectionTitle} onClick={() => handleClick('family')}>
           子連れにおすすめの宿泊先
           <span>
-            <AiOutlineRight size={18} />
+            <AiOutlineRight size="1.2rem" />
           </span>
         </h2>
         <SwiperRoomCardList rooms={rooms} />
@@ -46,7 +46,7 @@ const TopMainContents: React.FC<TopMainContentsProps> = ({ rooms }) => {
         <h2 className={styles.sectionTitle} onClick={() => handleClick('friend')}>
           大人数におすすめの宿泊先
           <span>
-            <AiOutlineRight size={18} />
+            <AiOutlineRight size="1.2rem" />
           </span>
         </h2>
         <SwiperRoomCardList rooms={rooms} />
