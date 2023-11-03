@@ -4,9 +4,19 @@
   background-color: #dddddd;
 }
 
+#logo {
+  /* ロゴを中央に寄せる */
+  display: flex;
+  justify-content: center;
+  /* カーソルを変更する */
+  cursor: pointer;
+  /* 上下の余白を設定する */
+  padding-top: 1rem;
+}
+
 #copyright {
   color: #222222;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   padding: 1rem;
 }

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { SITE_NAME } from '@/config/constants';
 import styles from '@/components/Footer/index.module.scss';
 
@@ -76,7 +77,11 @@ const Footer: React.FC = () => {
           </ul>
         </section>
       </div> */}
-      <p id={styles.copyright}>© 2023 {SITE_NAME}</p>
+      {/* Logo */}
+      <Link id={styles.logo} href="/">
+        <Image src="/logo.png" alt="logo" width={200} height={50} />
+      </Link>
+      <p id={styles.copyright}>© 2023 {SITE_NAME}_ハワイ宿泊</p>
     </footer>
   );
 };
