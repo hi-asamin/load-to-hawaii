@@ -5,6 +5,7 @@ import { RoomMainVisual } from '@/components/RoomMainVisual';
 import RoomHeader from '@/components/RoomHeader';
 import FloatingNav from '@/components/FloatingNav';
 import Footer from '@/components/Footer';
+import ScrollToTopButton from '@/components/ScrollToTopButton';
 
 interface Props {
   room: IRoom;
@@ -80,6 +81,7 @@ const Room: React.FC<Props> = ({ room }) => {
           <h2 className="">滞在エリア</h2>
         </section>
       </main>
+      <ScrollToTopButton />
       <Footer />
       {/* Mobile only */}
       <FloatingNav price={room.price} />
