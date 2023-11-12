@@ -123,6 +123,10 @@
     /* ハンバーガーメニューを右端に寄せる */
     margin: 1rem;
     justify-content: flex-end;
+    span {
+      /* 文字色を青色に設定する */
+      color: black;
+    }
   }
   .snsMenu {
     padding: 7rem 0;

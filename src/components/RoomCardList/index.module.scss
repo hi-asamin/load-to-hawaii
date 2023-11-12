@@ -1,0 +1,6 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust minmax values as needed */
+  grid-gap: 1rem; /* Space between cards */
+  margin: 1rem; /* Margin around the entire grid */
+}

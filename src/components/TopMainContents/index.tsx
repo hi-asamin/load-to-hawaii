@@ -11,7 +11,7 @@ interface TopMainContentsProps {
 const TopMainContents: React.FC<TopMainContentsProps> = ({ rooms }) => {
   const router = useRouter();
   const handleClick = (section: string) => {
-    router.push('/rooms');
+    // router.push('/rooms');
   };
   return (
     <>

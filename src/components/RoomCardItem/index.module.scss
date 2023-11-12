@@ -1,0 +1,26 @@
+.container {
+  display: block;
+}
+
+.thumbnail {
+  display: block;
+  width: 100%; /* Full width of the card */
+  height: 100%; /* Full height of the card */
+  aspect-ratio: 1 / 1; /* Ensures the image is square */
+  object-fit: cover; /* Ensures the image covers the area without stretching */
+  border-radius: 0.5rem; /* Optional: for rounded corners */
+}
+
+.details {
+  padding: 1rem 0.5rem; /* Adjust padding as needed */
+}
+
+.area,
+.feature,
+.price {
+  margin-bottom: 8px; /* Space between details */
+}
+
+.price {
+  font-weight: bold;
+}

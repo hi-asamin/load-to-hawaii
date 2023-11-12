@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode } from 'swiper/modules';
 
-import CardItem from '@/components/CardItem';
+import SwiperRoomCardItem from '@/components/SwiperRoomCardItem';
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -33,7 +33,7 @@ const SwiperRoomCardList: React.FC<RoomCardListProps> = ({ rooms }) => {
       {rooms.map((room, index) => (
         <SwiperSlide key={index}>
           <Link href={`/rooms/${room.id}`} key={room.id}>
-            <CardItem room={room} />
+            <SwiperRoomCardItem room={room} />
           </Link>
         </SwiperSlide>
       ))}

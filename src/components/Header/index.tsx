@@ -89,7 +89,7 @@ const Header: React.FC = () => {
         </li>
         <li>
           <Link href="/contact" className={styles.navItem}>
-            空室確認
+            予約
           </Link>
         </li>
       </ul>
@@ -163,7 +163,7 @@ const Header: React.FC = () => {
           </Link>
           {/* Hamburger Menu */}
           <button id={styles.hamburger} onClick={handleClick}>
-            {isMenuOpen ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
+            <span>{isMenuOpen ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}</span>
           </button>
         </div>
         {/* Mobile Navigation Menu */}

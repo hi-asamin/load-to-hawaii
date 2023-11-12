@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import RankingRibbon from '@/components/RankingRibbon';
-import styles from '@/components/CardItem/index.module.scss';
+import styles from '@/components/SwiperRoomCardItem/index.module.scss';
 
-interface CardItemProps {
+interface Props {
   room: IRoom;
 }
 
-const CardItem: React.FC<CardItemProps> = ({ room }) => {
+const SwiperRoomCardItem: React.FC<Props> = ({ room }) => {
   const { name, description, area, thumbnail, price, capacity, rank, discountInfo } = room;
   const truncateText = (text: string, maxLength: number) => {
     return text.length > maxLength ? `${text.substring(0, maxLength)}...` : text;
@@ -25,4 +25,4 @@ const CardItem: React.FC<CardItemProps> = ({ room }) => {
   );
 };
 
-export default CardItem;
+export default SwiperRoomCardItem;

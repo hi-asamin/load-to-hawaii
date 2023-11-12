@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
 import { fetchRooms } from '@/adapter/fetchRooms';
 import BaseLayout from '@/layout/BaseLayout';
-import CardList from '@/components/CardList';
+import RoomCardList from '@/components/RoomCardList';
 
 interface RoomsPageProps {
   rooms: IRoom[];
@@ -11,7 +11,7 @@ const Rooms: React.FC<RoomsPageProps> = ({ rooms }) => {
   return (
     <BaseLayout>
       <main>
-        <CardList rooms={rooms} />
+        <RoomCardList rooms={rooms} />
       </main>
     </BaseLayout>
   );
