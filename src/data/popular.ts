@@ -1,4 +1,4 @@
-export const rooms: IRoom[] = [
+export const popular: IRoom[] = [
   {
     id: '1',
     description:
@@ -20,6 +20,7 @@ export const rooms: IRoom[] = [
         alt: 'Room Image3',
       },
     ],
+    rank: '1',
     thumbnail: '/images/room-image.jpg',
     name: 'Hotel 1',
     area: 'Hawaii',
@@ -48,6 +49,7 @@ export const rooms: IRoom[] = [
         alt: 'Room Image3',
       },
     ],
+    rank: '2',
     thumbnail: '/images/room-image.jpg',
     name: 'Hotel 2',
     area: 'Hawaii',
@@ -76,6 +78,7 @@ export const rooms: IRoom[] = [
         alt: 'Room Image3',
       },
     ],
+    rank: '3',
     thumbnail: '/images/room-image.jpg',
     name: 'Hotel 3',
     area: 'Hawaii',
@@ -104,6 +107,7 @@ export const rooms: IRoom[] = [
         alt: 'Room Image3',
       },
     ],
+    rank: '4',
     thumbnail: '/images/room-image.jpg',
     name: 'Hotel 4',
     area: 'Hawaii',
@@ -132,6 +136,7 @@ export const rooms: IRoom[] = [
         alt: 'Room Image3',
       },
     ],
+    rank: '5',
     thumbnail: '/images/room-image.jpg',
     name: 'Hotel 5',
     area: 'Hawaii',

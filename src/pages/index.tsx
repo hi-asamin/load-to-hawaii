@@ -15,7 +15,7 @@ const Top: React.FC<TopPageProps> = ({ rooms }) => {
 };
 
 export const getStaticProps: GetStaticProps<TopPageProps> = async () => {
-  const rooms = await fetchRooms();
+  const rooms = await fetchRooms('popular');
   return {
     props: {
       rooms,

@@ -3,7 +3,7 @@ interface IRoom {
   name: string;
   images: Image[];
   description: string;
-  rank: string;
+  rank?: string;
   thumbnail: string;
   area: string;
   discountInfo?: string;
