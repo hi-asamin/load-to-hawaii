@@ -1,7 +1,7 @@
 import { AiOutlineRight } from 'react-icons/ai';
 import SwiperRoomCardList from '@/components/SwiperRoomCardList';
 
-import styles from '@/components/TopMainContents/index.module.scss';
+import styles from '@/components/organisms/SectionRoomCardList/index.module.scss';
 
 interface Props {
   id: string;
