@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import RankingRibbon from '@/components/RankingRibbon';
+import PricePerDay from '../atoms/PricePerDay';
 import styles from '@/components/SwiperRoomCardItem/index.module.scss';
 
 interface Props {
@@ -17,9 +18,7 @@ const SwiperRoomCardItem: React.FC<Props> = ({ room }) => {
       <Image className={styles.thumbnail} src={thumbnail} alt="" width={150} height={150} />
       <div className={styles.details}>
         <h5 className={styles.cardTitle}>{truncateText(name, 15)}</h5>
-        <div className={styles.price}>
-          <span>¥ {price} </span>/泊
-        </div>
+        <PricePerDay price={price} />
       </div>
     </div>
   );

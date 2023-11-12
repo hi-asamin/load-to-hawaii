@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import PricePerDay from '@/components/atoms/PricePerDay';
 import styles from '@/components/RoomCardItem/index.module.scss';
 
 interface Props {
@@ -18,9 +19,7 @@ const RoomCardItem: React.FC<Props> = ({ room }) => {
       <div className={styles.details}>
         <div className={styles.area}>{area}</div>
         <div className={styles.feature}>{area}</div>
-        <div className={styles.price}>
-          <span>¥ {price} </span>/泊
-        </div>
+        <PricePerDay price={price} />
       </div>
     </div>
   );
