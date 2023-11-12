@@ -1,0 +1,7 @@
+/* Mobileディスプレイのスタイリング */
+@media (max-width: 767px) {
+  .main {
+    /* フローティングナビゲーションの高さを考慮 */
+    padding-bottom: 4.5rem;
+  }
+}
