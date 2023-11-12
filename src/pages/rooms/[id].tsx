@@ -5,16 +5,17 @@ import RoomTemplate from '@/components/templates/Rooms/Id';
 
 interface Props {
   room: IRoom;
+  relatedRooms: IRoom[];
 }
 
-const Room: React.FC<Props> = ({ room }) => {
+const Room: React.FC<Props> = ({ room, relatedRooms }) => {
   return (
     <>
       <Head>
         {/* reset.css ress */}
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
       </Head>
-      <RoomTemplate room={room} />
+      <RoomTemplate room={room} relatedRooms={relatedRooms} />
     </>
   );
 };
@@ -38,10 +39,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {
   const rooms = await fetchRooms();
   const room = rooms.find((room: IRoom) => room.id.toString() === context.params?.id);
+  const relatedRooms = rooms;
 
   return {
     props: {
       room,
+      relatedRooms,
     },
   };
 };

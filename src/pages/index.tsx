@@ -1,8 +1,7 @@
 import { GetStaticProps } from 'next';
 import { fetchRooms } from '@/adapter/fetchRooms';
 import BaseLayout from '@/layout/BaseLayout';
-import MainVisual from '@/components/MainVisual';
-import TopMainContents from '@/components/TopMainContents';
+import TopTemplate from '@/components/templates/Top';
 interface TopPageProps {
   rooms: IRoom[];
 }
@@ -10,12 +9,7 @@ interface TopPageProps {
 const Top: React.FC<TopPageProps> = ({ rooms }) => {
   return (
     <BaseLayout>
-      {/* メインビジュアル */}
-      <MainVisual src="/images/main-visual.jpeg" alt="" />
-      {/* Swiperによる横並びカードのリスト */}
-      <main>
-        <TopMainContents rooms={rooms} />
-      </main>
+      <TopTemplate popular={rooms} pair={rooms} family={rooms} friend={rooms} />
     </BaseLayout>
   );
 };

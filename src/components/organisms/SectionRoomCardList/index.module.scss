@@ -1,0 +1,22 @@
+.sectionItem {
+  margin: 3rem 0;
+}
+.sectionTitle {
+  /* 余白を設定 */
+  margin: 1rem;
+  /* 左寄せ */
+  display: flex;
+  justify-content: flex-start;
+  /* 金色の線を引く */
+  border-bottom: 0.1rem solid #d4af37;
+  /* 子要素を垂直方向に中央揃え */
+  align-items: center;
+  /* 文字サイズを設定 */
+  font-size: 1.2rem;
+  span {
+    /* 文字色を青色に設定する */
+    color: #008dde;
+    /* 高さを指定する */
+    height: 1rem;
+  }
+}
