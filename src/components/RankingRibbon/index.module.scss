@@ -1,0 +1,26 @@
+.ribbon {
+  color: white;
+  display: inline-block;
+  padding: 0.5em;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.gold {
+  background: linear-gradient(45deg, #aa8504, #ffcc00);
+}
+
+.silver {
+  background: linear-gradient(45deg, #8d8d8d, #dcdcdc);
+}
+
+.bronze {
+  background: linear-gradient(45deg, #844c00, #ffa500);
+}
+
+.black {
+  background: linear-gradient(45deg, #000000, #434343);
+}

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import RankingRibbon from '@/components/RankingRibbon';
 import styles from '@/components/CardItem/index.module.scss';
 
 interface CardItemProps {
@@ -12,6 +13,7 @@ const CardItem: React.FC<CardItemProps> = ({ room }) => {
   };
   return (
     <div className={styles.container}>
+      {rank && <RankingRibbon rank={Number(rank)} />}
       <Image className={styles.thumbnail} src={thumbnail} alt="" width={150} height={150} />
       <div className="">
         <h5 className={styles.cardTitle}>{truncateText(name, 15)}</h5>

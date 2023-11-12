@@ -17,7 +17,7 @@ const SwiperRoomCardList: React.FC<RoomCardListProps> = ({ rooms }) => {
     <Swiper
       className={styles.swiperContainer}
       spaceBetween={16}
-      slidesPerView={2.3} // 画面に表示されるスライドの数（初期表示時に次のカードの一部が見えるようにする）
+      slidesPerView={2.15} // 画面に表示されるスライドの数（初期表示時に次のカードの一部が見えるようにする）
       onSlideChange={() => console.log('slide change')}
       freeMode={true} // スライドをスナップさせない
       modules={[FreeMode]}

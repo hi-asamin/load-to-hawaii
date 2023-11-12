@@ -1,5 +1,11 @@
 .container {
-  // margin: 1rem;
+  /* 角を丸くする */
+  border-radius: 0.5rem;
+  /* ボックスシャドウを指定する */
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+  /* アウトラインを指定する */
+  border: 1px solid #ccc;
+  position: relative;
 }
 
 .thumbnail {
