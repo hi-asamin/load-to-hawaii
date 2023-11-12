@@ -15,10 +15,10 @@ const SwiperRoomCardItem: React.FC<Props> = ({ room }) => {
     <div className={styles.container}>
       {rank && <RankingRibbon rank={Number(rank)} />}
       <Image className={styles.thumbnail} src={thumbnail} alt="" width={150} height={150} />
-      <div className="">
+      <div className={styles.details}>
         <h5 className={styles.cardTitle}>{truncateText(name, 15)}</h5>
         <div className={styles.price}>
-          <span>{price}</span>円 / 泊
+          <span>¥ {price} </span>/泊
         </div>
       </div>
     </div>

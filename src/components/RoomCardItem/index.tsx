@@ -19,7 +19,7 @@ const RoomCardItem: React.FC<Props> = ({ room }) => {
         <div className={styles.area}>{area}</div>
         <div className={styles.feature}>{area}</div>
         <div className={styles.price}>
-          <span>{price}</span>円 / 泊
+          <span>¥ {price} </span>/泊
         </div>
       </div>
     </div>
