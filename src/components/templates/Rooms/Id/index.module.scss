@@ -1,7 +1,14 @@
 .container {
-  margin: 1rem;
+  margin: 0 1rem;
   section {
-    margin: 1rem;
+    margin: 1rem 0;
+  }
+}
+
+/* PCディスプレイのスタイリング */
+@media (min-width: 768px) {
+  .container {
+    margin: 0 5rem;
   }
 }
 

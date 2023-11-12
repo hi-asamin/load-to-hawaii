@@ -23,14 +23,14 @@
 }
 
 .button {
-  padding: 0.5rem 1rem;
+  padding: 0.9rem 2rem;
   font-size: 1rem;
   /* ボタンの角を丸くする */
   border-radius: 0.5rem;
   /* ボタンの文字色を白色に指定する */
   color: #fff;
   /* ボタンの背景色を青色に指定する */
-  background-color: #007bff;
+  background: linear-gradient(45deg, #173bef, #1b68ee);
 }
 
 /* PCディスプレイのスタイリング */

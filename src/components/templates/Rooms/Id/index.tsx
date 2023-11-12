@@ -20,7 +20,7 @@ const RoomTemplate = ({ room, relatedRooms }: Props): JSX.Element => {
   return (
     <>
       {/* PC only & メインビジュアル以下にスクロールされた場合 */}
-      {!isInView && <RoomHeader />}
+      {!isInView && <RoomHeader price={room.price} />}
       {/* PC only & メインビジュアル以下にスクロールされた場合 */}
       <main>
         {/* 写真 */}

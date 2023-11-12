@@ -7,9 +7,15 @@
   z-index: 99999;
   /* 背景色を指定する */
   background-color: #fff;
-  padding: 1rem 2rem;
+  padding: 1rem 5rem;
   /* ボーダーラインを指定する */
   border-bottom: 1px solid #ccc;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .menu {
@@ -29,6 +35,23 @@
   margin-right: 2rem;
   /* 文字を太くする */
   font-weight: bold;
+}
+
+.reserve {
+  display: flex;
+  align-items: center;
+  .button {
+    margin-left: 1rem;
+    /* ボタンの余白を指定する */
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    /* ボタンの角を丸くする */
+    border-radius: 0.5rem;
+    /* ボタンの文字色を白色に指定する */
+    color: #fff;
+    /* ボタンの背景色を青色に指定する */
+    background: linear-gradient(45deg, #173bef, #1b68ee);
+  }
 }
 
 /* Mobileディスプレイのスタイリング */
