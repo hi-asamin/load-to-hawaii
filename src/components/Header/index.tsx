@@ -67,11 +67,12 @@ const Header: React.FC = () => {
   const NavigationMenu = () => {
     return (
       <ul className={styles.menu}>
-        <li>
+        {/* TODO: LP作る */}
+        {/* <li>
           <Link href="/about" className={styles.navItem}>
             はじめての方
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link
             href={BLOG_URL}
