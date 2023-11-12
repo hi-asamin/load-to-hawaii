@@ -1,6 +1,13 @@
+.container {
+  margin: 1rem;
+  section {
+    margin: 1rem;
+  }
+}
+
 /* Mobileディスプレイのスタイリング */
 @media (max-width: 767px) {
-  .main {
+  .footerWrap {
     /* フローティングナビゲーションの高さを考慮 */
     padding-bottom: 4.5rem;
   }

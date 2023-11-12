@@ -6,7 +6,7 @@ import { AiOutlineMenu, AiOutlineClose, AiOutlineInstagram } from 'react-icons/a
 import { FaTiktok, FaLine } from 'react-icons/fa';
 import { BLOG_URL, TIKTOK_ACCOUNT, INSTAGRAM_ACCOUNT, LINE_ACCOUNT } from '@/config/constants';
 
-import styles from '@/components/Header/index.module.scss';
+import styles from '@/components/organisms/Header/index.module.scss';
 
 const Header: React.FC = () => {
   const router = useRouter();

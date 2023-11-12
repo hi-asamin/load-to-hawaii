@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { ReactNode } from 'react';
-import Header from '@/components/Header';
+import Header from '@/components/organisms/Header';
 import Footer from '@/components/Footer';
 import { SITE_NAME, SITE_DESCRIPTION } from '@/config/constants';
 
