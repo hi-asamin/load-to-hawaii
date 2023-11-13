@@ -50,8 +50,9 @@ const ContactForm = (): JSX.Element => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className={styles.inputGroup}>
             <label className={styles.inputLabel} htmlFor="budget">
-              旅の予算（円）<text className={styles.optional}>任意</text>
+              価格帯（円）<text className={styles.optional}>任意</text>
             </label>
+            <div className={styles.memo}>1泊あたりの宿泊料金（手数料及び税抜き）</div>
             <div>
               <input
                 id="budget"

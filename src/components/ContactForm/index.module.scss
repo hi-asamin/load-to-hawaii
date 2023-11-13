@@ -40,6 +40,13 @@
   textarea {
     @include input-styles;
   }
+
+  .memo {
+    /* 文字色をグレーに */
+    color: #666;
+    /* 文字を小さく */
+    font-size: 0.8rem;
+  }
 }
 
 .inputLabel {
