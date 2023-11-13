@@ -3,24 +3,13 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 
 import styles from '@/components/ContactForm/index.module.scss';
 
-type Inputs = {
-  number?: number; // 人数
-  dateFrom: string; // 希望日程（開始）
-  dateTo: string; // 希望日程（終了）
-  preferredProperty: string; // 希望物件
-  name?: string; // 名前
-  secondChoiceProperty?: string; // 第二希望物件
-  budget?: string; // 予算
-  email: string; // メールアドレス
-};
-
-const ContactForm: React.FC = () => {
+const ContactForm = (): JSX.Element => {
   const router = useRouter();
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<Inputs>();
+  } = useForm<IContactForm>();
 
   /**
    * 全角数字を半角数字に変換する
@@ -31,7 +20,7 @@ const ContactForm: React.FC = () => {
   const toHalfWidth = (value: string): string =>
     value.replace(/[０-９]/g, (s) => String.fromCharCode(s.charCodeAt(0) - 0xfee0));
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
+  const onSubmit: SubmitHandler<IContactForm> = (data) => {
     console.log(data);
     // ここでフォームのデータをサーバーに送信します。
     fetch('/api/contact', {
@@ -97,6 +86,21 @@ const ContactForm: React.FC = () => {
                 defaultValue=""
               />
               {errors.email && <div className={styles.error}>{errors.email.message}</div>}
+            </div>
+          </div>
+          <div className={styles.inputGroup}>
+            <label className={styles.inputLabel} htmlFor="email">
+              フリーコメント<text className={styles.optional}>任意</text>
+            </label>
+            <div>
+              <textarea
+                id="message"
+                {...register('message', {})}
+                placeholder={`お問い合わせ内容を入力してください。\n質問があればこちらに記載してください。`}
+                defaultValue=""
+                rows={5}
+              />
+              {errors.message && <div className={styles.error}>{errors.message.message}</div>}
             </div>
           </div>
           <button className={styles.subumitButton} type="submit">

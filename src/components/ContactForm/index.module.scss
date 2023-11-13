@@ -1,11 +1,17 @@
+// Define variables for repeated values
+$input-background-color: #eee;
+$input-padding: 0.5rem;
+$input-border-radius: 0.3rem;
+$input-border: 1px solid #ddd;
+$input-width: 20rem;
+
 .container {
   /* 画面の中央に表示する */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0 auto;
+  margin: 1rem 5rem;
   form {
     /* 中央寄せ */
     text-align: center;
@@ -17,7 +23,9 @@
   margin: 2rem 0;
   /* 文字を左寄せに */
   text-align: left;
-  input {
+
+  // Define a mixin for shared input styles
+  @mixin input-styles {
     /* 背景色を薄いグレーに */
     background-color: #eee;
     /* 入力項目の両サイドに余白を設ける */
@@ -28,6 +36,16 @@
     border: 1px solid #ddd;
     /* 入力項目の幅を広げる */
     width: 20rem;
+  }
+
+  // Use the mixin for input
+  input {
+    @include input-styles;
+  }
+
+  // Use the mixin for textarea
+  textarea {
+    @include input-styles;
   }
 }
 
