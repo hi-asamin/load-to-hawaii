@@ -46,7 +46,7 @@ const ContactForm = (): JSX.Element => {
   return (
     <>
       <div className={styles.container}>
-        <h1>お問い合わせフォーム</h1>
+        <h1>お問い合わせ</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className={styles.inputGroup}>
             <label className={styles.inputLabel} htmlFor="budget">
