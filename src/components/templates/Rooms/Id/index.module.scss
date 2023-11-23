@@ -21,6 +21,8 @@
   .text {
     /* 文字に下線を引く */
     text-decoration: underline;
+    /* 文字色を黒に設定する */
+    color: black;
   }
   .icon {
     font-size: 1rem;
@@ -51,6 +53,8 @@
   .text {
     /* 文字を太くする */
     font-weight: bold;
+    /* 文字色を黒に設定する */
+    color: black;
   }
 }
 
