@@ -1,8 +1,61 @@
 .container {
   margin: 0 1rem;
-  section {
-    margin: 1rem 0;
+  h1 {
+    font-size: 1.7rem;
   }
+}
+
+.sectionSeparator {
+  padding: 2rem 0;
+  /* セクションの下に線を引く */
+  border-bottom: 1px solid #ddd;
+}
+
+.more {
+  /* textとiconを横並びにする */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 余白を設定 */
+  margin-top: 1rem;
+  .text {
+    /* 文字に下線を引く */
+    text-decoration: underline;
+  }
+  .icon {
+    font-size: 1rem;
+    color: black;
+    /* 高さを指定する */
+    height: 1rem;
+  }
+}
+
+.allOpen {
+  /* 枠線の色を設定 */
+  border-color: black;
+  /* 枠線の太さを設定 */
+  border-width: 1px;
+  /* 枠線の種類を設定 */
+  border-style: solid;
+  /* 枠線の角を丸くする */
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  /* 余白を設定 */
+  margin-top: 1rem;
+  /* ホバー時に背景色を白からライトグレーに変化させる */
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  &:hover {
+    /* 背景色をライトグレーにする */
+    background-color: #f0f0f0;
+  }
+  .text {
+    /* 文字を太くする */
+    font-weight: bold;
+  }
+}
+
+.lastSectionSeparator {
+  padding: 2rem 0;
 }
 
 /* PCディスプレイのスタイリング */
@@ -17,5 +70,8 @@
   .footerWrap {
     /* フローティングナビゲーションの高さを考慮 */
     padding-bottom: 4.5rem;
+  }
+  .allOpen {
+    width: 100%;
   }
 }

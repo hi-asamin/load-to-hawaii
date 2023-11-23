@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { AiOutlineRight } from 'react-icons/ai';
 import { useInView } from '@/hooks/useInView';
 import { RoomMainVisual } from '@/components/RoomMainVisual';
 import RoomHeader from '@/components/RoomHeader';
@@ -28,21 +29,31 @@ const RoomTemplate = ({ room, relatedRooms }: Props): JSX.Element => {
           <RoomMainVisual images={room.images} />
         </section>
         <div className={styles.container}>
-          {/* 物件概要 */}
-          <section id="detail">
-            {/* 物件名称 */}
+          {/* 物件名称 */}
+          <section id="name" className={styles.sectionSeparator}>
             <h1 className="">{room.name}</h1>
-            {/* 詳細説明 */}
-            <p className="">{room.description}</p>
           </section>
           {/* 寝室・ベッド */}
-          <section id="cancelPolicy">
+          <section id="cancelPolicy" className={styles.sectionSeparator}>
             <h2 className="">寝室・ベッド</h2>
           </section>
+          {/* 詳細説明 */}
+          <section id="detail" className={styles.sectionSeparator}>
+            <p className="">{room.description}</p>
+            <button className={styles.more}>
+              <span className={styles.text}>もっと見る</span>
+              <span className={styles.icon}>
+                <AiOutlineRight />
+              </span>
+            </button>
+          </section>
           {/* アメニティ */}
-          <section id="amenities">
+          <section id="amenities" className={styles.sectionSeparator}>
             <h2 className="">提供されるアメニティ・設備</h2>
-            <section id="bathroom">
+            <button className={styles.allOpen}>
+              <span className={styles.text}>アメニティ・設備を全て表示</span>
+            </button>
+            {/* <section id="bathroom">
               <h3 className="">バスルーム</h3>
             </section>
             <section id="bedroom">
@@ -80,18 +91,18 @@ const RoomTemplate = ({ room, relatedRooms }: Props): JSX.Element => {
             </section>
             <section id="other">
               <h3 className="">その他</h3>
-            </section>
+            </section> */}
           </section>
           {/* エリア */}
-          <section id="area">
+          <section id="area" className={styles.sectionSeparator}>
             <h2 className="">滞在エリア</h2>
           </section>
           {/* キャンセルポリシー */}
-          <section id="cancelPolicy">
+          <section id="cancelPolicy" className={styles.sectionSeparator}>
             <h2 className="">キャンセルポリシー</h2>
           </section>
           {/* ハウスルール */}
-          <section id="rules">
+          <section id="rules" className={styles.lastSectionSeparator}>
             <h2 className="">ハウスルール</h2>
           </section>
         </div>
