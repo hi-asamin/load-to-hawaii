@@ -3,7 +3,11 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 
 import styles from '@/components/ContactForm/index.module.scss';
 
-const ContactForm = (): JSX.Element => {
+interface Props {
+  referer: string | null;
+}
+
+const ContactForm = ({ referer }: Props): JSX.Element => {
   const router = useRouter();
   const {
     register,
@@ -22,17 +26,21 @@ const ContactForm = (): JSX.Element => {
 
   const onSubmit: SubmitHandler<IContactForm> = (data) => {
     console.log(data);
+    const body: ContactApiRequestBody = {
+      referer: referer || '',
+      body: data,
+    };
     // ここでフォームのデータをサーバーに送信します。
     fetch('/api/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(body),
     })
       .then((response) => response.json())
-      .then((data) => {
-        console.log('Success:', data);
+      .then((req) => {
+        console.log('Success:', req);
         // 問い合わせが成功したポップアップを表示する
         alert('問い合わせが成功しました');
         router.push('/');

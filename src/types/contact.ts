@@ -1,5 +1,6 @@
 interface ContactApiRequestBody {
-  email: string;
+  referer?: string;
+  body: IContactForm;
 }
 
 interface IContactForm {
