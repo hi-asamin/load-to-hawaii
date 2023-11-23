@@ -33,7 +33,7 @@ const RoomHeader = ({ price }: Props): JSX.Element => {
         <div className={styles.reserve}>
           <PricePerDay price={price} />
           <Link href="/contact">
-            <button className={styles.button}>予約する</button>
+            <button className={styles.button}>問い合わせする</button>
           </Link>
         </div>
       </div>

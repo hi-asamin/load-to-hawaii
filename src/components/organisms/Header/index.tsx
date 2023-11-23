@@ -90,7 +90,7 @@ const Header: React.FC = () => {
         </li>
         <li>
           <Link href="/contact" className={styles.navItem}>
-            予約
+            お問い合わせ
           </Link>
         </li>
       </ul>

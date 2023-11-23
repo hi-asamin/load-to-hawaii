@@ -11,7 +11,7 @@ const FloatingNav: React.FC<FloatingNavProps> = ({ price }) => {
       <div className={styles.container}>
         <PricePerDay price={price} />
         <Link href="/contact">
-          <button className={styles.button}>予約する</button>
+          <button className={styles.button}>問い合わせする</button>
         </Link>
       </div>
     </div>
