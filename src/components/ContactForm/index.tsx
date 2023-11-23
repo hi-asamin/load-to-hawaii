@@ -60,7 +60,7 @@ const ContactForm = ({ referer }: Props): JSX.Element => {
             <label className={styles.inputLabel} htmlFor="budget">
               価格帯（円）<text className={styles.optional}>任意</text>
             </label>
-            <div className={styles.memo}>1泊あたりの宿泊料金（手数料及び税抜き）</div>
+            <div className={styles.memo}>1泊あたりの宿泊料金</div>
             <div>
               <input
                 id="budget"
