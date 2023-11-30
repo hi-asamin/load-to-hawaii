@@ -10,6 +10,25 @@
     text-align: center;
     width: 100%;
     max-width: 700px;
+    min-width: 300px;
+  }
+}
+
+.lineButton {
+  /* LINEカラーにする */
+  background-color: #00b900;
+  color: white;
+  margin: 2rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  /* 横幅いっぱいに広げる */
+  width: 100%;
+  /* ホバー時に少し大きくする */
+  transition: transform 0.1s ease;
+  &:hover {
+    transform: scale(1.05);
   }
 }
 

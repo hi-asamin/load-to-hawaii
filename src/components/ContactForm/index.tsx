@@ -1,5 +1,8 @@
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useForm, SubmitHandler } from 'react-hook-form';
+
+import { LINE_ACCOUNT } from '@/config/constants';
 
 import styles from '@/components/ContactForm/index.module.scss';
 
@@ -24,6 +27,12 @@ const ContactForm = ({ referer }: Props): JSX.Element => {
   const toHalfWidth = (value: string): string =>
     value.replace(/[０-９]/g, (s) => String.fromCharCode(s.charCodeAt(0) - 0xfee0));
 
+  /**
+   * お問い合わせフォームの送信処理
+   * @description お問い合わせフォームの送信処理
+   * @param {IContactForm} data お問い合わせフォームのデータ
+   * @returns {void}
+   */
   const onSubmit: SubmitHandler<IContactForm> = (data) => {
     console.log(data);
     const body: ContactApiRequestBody = {
@@ -55,6 +64,16 @@ const ContactForm = ({ referer }: Props): JSX.Element => {
     <>
       <div className={styles.container}>
         <h1>お問い合わせ</h1>
+        <button className={styles.lineButton} type="button">
+          <Link
+            className={styles.navItem}
+            href={LINE_ACCOUNT}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LINEコンシェルジュを活用する
+          </Link>
+        </button>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className={styles.inputGroup}>
             <label className={styles.inputLabel} htmlFor="budget">
